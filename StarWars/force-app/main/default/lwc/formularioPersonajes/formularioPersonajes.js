@@ -10,6 +10,7 @@ import EYE_FIELD from '@salesforce/schema/Contact.eye_color__c';
 import URL_FIELD from '@salesforce/schema/Contact.url__c';
 import HOME_FIELD from '@salesforce/schema/Contact.homeworld__c';
 
+
  
 export default class lwcContact extends LightningElement {
  
@@ -42,4 +43,16 @@ export default class lwcContact extends LightningElement {
         this.dispatchEvent(evt);
     }
  
+handleSearchId(event){
+
+    console.log(event.detail.value);
+    fetch("https://swapi.co/api/people/1/",{headers: {
+        'Content-Type': 'application/json','Content-Security-Policy': 'connect-src "self" https://swapi.co'
+      },}).then((response)=>{
+        console.log(response);
+    })
+ 
+
+}
+
 }

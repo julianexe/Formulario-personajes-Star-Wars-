@@ -6,4 +6,7 @@ public with sharing class StarController {
         eye_color__c, url__c, homeworld__c, number_character__c FROM Contact];
 
     }
+
+
+    
 }

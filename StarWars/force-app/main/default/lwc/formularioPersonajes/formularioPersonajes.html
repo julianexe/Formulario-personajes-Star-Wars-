@@ -1,4 +1,15 @@
 <template>
+
+    <div class="slds-m-bottom_small">
+        <lightning-input type="text"
+          onchange={handleSearchId}
+           label="Character ID"
+           
+           ></lightning-input>
+     </div>
+     
+     
+
     <lightning-card title="Crear personaje" icon-name="utility:world">
         <lightning-record-form
             object-api-name="Contact"
