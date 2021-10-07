@@ -1,6 +1,8 @@
 import { LightningElement, wire, api } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import getPersonajes from '@salesforce/apex/StarController.getPersonajes'
+
+import getPersonajes from '@salesforce/apex/StarController.getPersonajes';
+
 import NUMBER_FIELD from '@salesforce/schema/Contact.number_character__c';
 import NAME_FIELD from '@salesforce/schema/Contact.LastName';
 import HEIGHT_FIELD from '@salesforce/schema/Contact.height__c';
@@ -10,10 +12,12 @@ import EYE_FIELD from '@salesforce/schema/Contact.eye_color__c';
 import URL_FIELD from '@salesforce/schema/Contact.url__c';
 import HOME_FIELD from '@salesforce/schema/Contact.homeworld__c';
 
-
- 
 export default class lwcContact extends LightningElement {
- 
+
+
+
+
+
     contactColumns = [
 
         { label: 'Number Character', fieldName: 'number_character__c' },
@@ -42,17 +46,4 @@ export default class lwcContact extends LightningElement {
         });
         this.dispatchEvent(evt);
     }
- 
-handleSearchId(event){
-
-    console.log(event.detail.value);
-    fetch("https://swapi.co/api/people/1/",{headers: {
-        'Content-Type': 'application/json','Content-Security-Policy': 'connect-src "self" https://swapi.co'
-      },}).then((response)=>{
-        console.log(response);
-    })
- 
-
-}
-
 }

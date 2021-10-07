@@ -1,0 +1,12 @@
+.contact-tile {
+    border: 1px solid #26c3df;
+    background-color: #75b6b6;
+    border-radius: .25rem;
+    display: block;
+  }
+  .contact-silhouette {
+    height: 100px;
+  }
+  .contact-tile-body {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 80%, #d2faf8 100%);
+  }

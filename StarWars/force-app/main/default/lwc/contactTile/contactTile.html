@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title={contact.number_character__c} class="contact-tile">
+        <div slot="actions">
+            <lightning-button-icon
+                icon-name="utility:search"
+                icon-class="contact-tile-button"
+                variant="bare"
+                alternative-text="Open record"
+                onclick={handleOpenRecordClick}>
+            </lightning-button-icon>
+        </div>
+		<div class="slds-var-p-horizontal_small contact-tile-body">
+			<div class="slds-media">
+				
+				<div class="slds-media__body">
+					<p class="slds-var-m-bottom_xx-small">Nombre: {contact.LastName}</p>
+					<p class="slds-var-m-bottom_xx-small">Altura: {contact.height__c}</p>
+					<p class="slds-var-m-bottom_xx-small">Genero: {contact.gender__c}</p>
+					<p class="slds-var-m-bottom_xx-small">Color de Cabello: {contact.hair_color__c}</p>
+                    <p class="slds-var-m-bottom_xx-small">Color de Ojos: {contact.eye_color__c}</p>
+                    <p class="slds-var-m-bottom_xx-small">URL: {contact.url__c}</p>
+                    <p class="slds-var-m-bottom_xx-small">Planeta: {contact.homeworld__c}</p>
+                    <p class="slds-var-m-bottom_xx-small">Numero: {contact.number_character__c}</p>
+				</div>
+			</div>
+		</div>
+	</lightning-card>
+</template>
